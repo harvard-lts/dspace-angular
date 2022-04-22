@@ -2973,6 +2973,10 @@
   // "item.page.uri": "URI",
   "item.page.uri": "URI",
 
+  // "item.page.research.uri": "Research Data",
+  // TODO New key - Add a translation
+  "item.page.research.uri": "Research Data",
+
   // "item.page.bitstreams.view-more": "Show more",
   "item.page.bitstreams.view-more": "Plus de résultats",
 

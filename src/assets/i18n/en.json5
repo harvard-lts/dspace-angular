@@ -2110,6 +2110,8 @@
 
   "item.page.uri": "URI",
 
+  "item.page.research.uri": "Research Data",
+
   "item.page.bitstreams.view-more": "Show more",
 
   "item.page.bitstreams.collapse": "Collapse",
