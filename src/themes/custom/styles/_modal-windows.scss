@@ -1,0 +1,19 @@
+.modal-title {
+  font-size: 28px;
+  font-weight: $font-weight-bolder;
+  line-height: 1.5;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+}
+.modal-content {
+  padding: $spacer * 2;
+}
+.modal .close:hover {
+  color: $red;
+}
+.modal-header {
+  margin-bottom: $spacer;
+}
+.modal-footer {
+  margin-top: $spacer;
+}

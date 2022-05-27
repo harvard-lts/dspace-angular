@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  margin-top: calc(var(--ds-content-spacing) * -1);
+  margin-bottom:70px;
+
+  @media(max-width: 971px){
+    margin-bottom: 40px;
+  }
+}

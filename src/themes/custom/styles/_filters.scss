@@ -1,0 +1,301 @@
+// FILTER BAR
+ds-search-filters {
+  padding: 25px;
+  background: $background-gray;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  // reset filters button
+  > a.btn {
+    background: $white;
+    color: $black;
+    border-color: $black;
+    padding: 5px 9px;
+    margin-top: 20px;
+    font-size: 12px;
+
+    &:hover, &:focus {
+      background: $gray-600;
+      border-color: $gray-600;
+    }
+  }
+}
+
+// filter category titles
+.filter-name > * {
+	color: $black;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+// category sections - add bottom border
+ds-search-filters > div {
+  ds-search-filter > div.facet-filter {
+    border: none !important;
+    margin-bottom: 0 !important;
+    padding: 25px 0 !important;
+  }
+
+  > div:not(:last-child) ds-search-filter > div.facet-filter {
+    border-bottom: 1px solid $border-gray !important;
+  }
+}
+
+// show more/collapse links
+.toggle-more-filters a {
+  text-decoration: none !important;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: normal;
+  margin: 10px 0;
+
+  &::after {
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  &.float-left::after {
+    content: "";
+    color: $blue;
+    opacity: 0.6;
+    border-left: 0.425em solid transparent;
+    border-right: 0.425em solid transparent;
+    border-top: 0.5em solid currentColor;
+    float: right;
+    position: relative;
+    top: 6px;
+    font-size: 14px;
+    transition: transform 0.5s ease;
+    margin-left: 5px;
+  }
+
+  &.float-right::after {
+    content: "";
+    color: $blue;
+    opacity: 0.6;
+    border-left: 0.425em solid transparent;
+    border-right: 0.425em solid transparent;
+    border-bottom: 0.5em solid currentColor;
+    float: right;
+    position: relative;
+    top: 6px;
+    font-size: 14px;
+    transition: transform 0.5s ease;
+    margin-left: 5px;
+  }
+}
+
+// filter search boxes
+ds-filter-input-suggestions form,
+ds-search-range-filter form {
+  label span {
+    color: $gray-600;
+    font-size: 16px;
+  }
+
+  input.form-control {
+    font-size: 16px;
+    display: inline-block;
+    padding: 6px 12px;
+  }
+
+  .autocomplete.dropdown-menu.show {
+    top: 60px;
+    border-top: none;
+    border-color: $border-gray;
+    border-radius: 0 0 4px 4px;
+
+    .dropdown-item {
+      padding: 6px 12px;
+    }
+  }
+}
+
+// selected filter labels (modeled off of 'search contraints' in geoblacklight)
+ds-search-label a.badge {
+  color: $black;
+  padding: 5px 9px;
+  margin: 0 5px 4px 0;
+  border: 1px solid $border-gray;
+  border-radius: 4px;
+  background: #FAFAFA;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 7px;
+
+  span {
+    border-radius: 50%;
+    padding: 0.5em;
+    margin-left: 9px;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    background: $gray-600;
+    border: 1px solid $gray-600;
+    position: relative;
+    transition: all 0.4s ease;
+    color: transparent;
+
+    &::before, &::after {
+      content: " ";
+      position: absolute;
+      display: block;
+      background: $white;
+      width: 2px;
+      left: 8.5px;
+      top: 4px;
+      bottom: 4px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:hover, &:focus {
+    background: $gray-100;
+    border-color: $border-gray;
+    color: $black;
+
+    span {
+      background: $red;
+      border-color: $red;
+    }
+  }
+}
+
+
+// search facets filter bar
+ds-search-facet-option, 
+ds-search-facet-selected-option {
+  a:not(.btn) {
+    border-bottom: none;
+    padding: 5px 0;
+
+    label {
+      cursor: pointer;
+      color: $black;
+      border-bottom: 3px solid transparent;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    span.badge {
+      background-color: transparent;
+      color: $gray-600;
+      font-size: 16px;
+      font-weight: 400;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    &:hover, &:focus {
+      label {
+        border-bottom: 3px solid rgba(30, 30, 30, 0.5);
+      }
+    }
+  }
+}
+
+ds-search-facet-selected-option {
+  a:not(.btn) {
+    label {
+      font-weight: 700;
+
+      // &::after {
+      //   content: "\00d7";
+      //   font-family: FontAwesome;
+      //   margin-left: 9px;
+      //   color: white;
+      //   background: #6c6c6c;
+      //   height: 21px;
+      //   width: 21px;
+      //   line-height: 21px;
+      //   display: inline-block;
+      //   text-align: center;
+      //   border-radius: 50%;
+      // }
+    }
+
+    // &:hover, &:focus {
+    //   label::after {
+    //     background: #eb001b;
+    //   }
+    // }
+  }
+}
+
+// date range filter
+ds-search-facet-range-option {
+  a:not(.btn) {
+    border-bottom: none;
+    padding: 5px 0;
+
+    span.filter-value {
+      cursor: pointer;
+      color: $black;
+      border-bottom: 3px solid transparent;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 0 !important;
+    }
+
+    span.badge {
+      background-color: transparent;
+      color: $gray-600;
+      font-size: 16px;
+      font-weight: 400;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    &:hover, &:focus {
+      text-decoration: none;
+
+      span.filter-value {
+        border-bottom: 3px solid rgba(30, 30, 30, 0.5);
+      }
+    }
+  }
+}
+
+// search settings filter section
+ds-search-settings {
+  display: block;
+  padding: 25px 25px 0 25px;
+  background: $background-gray;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  ds-sidebar-dropdown .setting-option {
+    border: 0 !important;
+    padding: 25px 0 30px 0 !important;
+    margin-bottom: 0 !important;
+    border-top: 1px solid $border-gray !important;
+
+    h5 {
+      margin-bottom: 0;
+      color: $black;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    select.form-control {
+      font-size: 16px;
+      padding: 6px 12px;
+    }
+  }
+
+  > div ds-sidebar-dropdown .setting-option {
+    border-top: none !important;
+  }
+}
