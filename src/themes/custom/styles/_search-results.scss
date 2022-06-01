@@ -47,10 +47,8 @@ ds-community-list-element {
 }
 
 // Button in search box - reduced L/R padding slightly so that it's not truncated when says "All of DASH"
-ds-page-with-sidebar {
-  ds-search-form {
-    button.scope-button.text-truncate {
-      padding: 12px 20.5px;
-    }
+ds-search-form {
+  button.scope-button {
+    padding: 12px 20px;
   }
 }
