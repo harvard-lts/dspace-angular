@@ -1,0 +1,54 @@
+// badge --> eyebrow
+.badge-info {
+	// font-family: $f-trueno;
+	color: $gray-600;
+	// display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	// vertical-align: middle;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+}
+
+// "now showing # of # results
+ds-pagination .pagination-info {
+  font-family: $f-trueno;
+  font-size: 15px;
+
+  span.align-middle:last-child {
+    font-weight: 700;
+  }
+}
+
+// search results snippets
+.item-list-title.lead, 
+ds-browse-entry-list-element a.lead,
+ds-community-list-element a.lead,
+ds-themed-community-list a.lead {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.text-muted, .item-list-abstract {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+// search item snippets
+ds-item-list-element,
+ds-browse-entry-list-element,
+ds-item-search-result-list-element,
+ds-community-list-element {
+  max-width: 930px;
+  display: block;
+}
+
+// Button in search box - reduced L/R padding slightly so that it's not truncated when says "All of DASH"
+ds-search-form {
+  button.scope-button {
+    padding: 12px 20px;
+  }
+}

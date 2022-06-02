@@ -1,0 +1,87 @@
+ds-themed-header-navbar-wrapper {
+  background: $c-black;
+}
+
+ds-themed-navbar {
+  // make the nav full-width
+  ds-navbar .container {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .navbar-nav {
+    .nav-item {
+      a.nav-link {
+        color: $c-white;
+        border-bottom: 3px solid transparent;
+        padding: 0;
+        margin: 0.5rem 1rem;
+  
+        &:hover, &:focus {
+          color: white;
+          border-bottom-color: rgba(255,255,255,0.3);
+  
+        }
+      }
+
+      .dropdown-menu.show {
+        background: #1e1e1e;
+        border: none;
+  
+        &.loginDropdownMenu {
+          background: white;
+        }
+      }
+    }
+
+    li:first-child a.nav-link {
+      margin-left: 0;
+    }
+  }
+
+  ds-search-navbar a.submit-icon,
+  ds-lang-switch a.dropdown-toggle,
+  .navbar-nav .nav-item a.dropdown-toggle {
+
+    &:hover, &:focus {
+      border-bottom-color: rgba(255,255,255,0.3);
+    }
+  }
+
+  li > .navbar-section,
+  li > .expandable-navbar-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+// navbar links/icons color on small screen
+nav {
+  a.loginLink,
+  a.dropdown-toggle,
+  button.navbar-toggler span.navbar-toggler-icon {
+    color: $c-white;
+  }
+}
+
+// .fa-search::before {
+//   color: white;
+// }
+// .fa-globe-asia::before {
+// 	color: white;
+// }
+// a.loginLink {
+//   color: white;
+// }
+
+@media screen and (min-width: map-get($grid-breakpoints, md)) {
+  nav.navbar.navbar-toggle {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  margin-right: 15px;
+}

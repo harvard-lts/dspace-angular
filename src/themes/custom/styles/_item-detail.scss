@@ -1,0 +1,24 @@
+// item detail page
+h2.item-page-title-field {
+	font-family: $f-lora;
+	font-size: 36px;
+	text-transform: none;
+	letter-spacing: normal;
+  margin-top: 30px;
+}
+h5.simple-view-element-header {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.simple-view-element-header + .simple-view-element-body {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  // font-size: 15px;
+  // line-height: 28px;
+}
+ds-thumbnail .thumbnail-content {
+	margin-bottom: 30px;
+}

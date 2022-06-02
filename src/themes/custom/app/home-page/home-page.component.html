@@ -1,0 +1,25 @@
+<ds-themed-home-news></ds-themed-home-news>
+<div class="container">
+  <ng-container *ngIf="(site$ | async) as site">
+    <ds-view-tracker [object]="site"></ds-view-tracker>
+  </ng-container>
+
+  <section class="hl__icon-promo">
+    <div class="hl__icon-promo__container">
+      <div class="hl__icon-promo__content">
+        <div class="hl__icon-promo__icon" aria-hidden="true">
+          <svg width="70px" height="66px" viewBox="0 0 70 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient x1="50%" y1="50%" x2="0%" y2="0%" id="linearGradient-1"><stop stop-color="#F8C21C" offset="0%"></stop><stop stop-color="#B89015" offset="100%"></stop></linearGradient></defs><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-27.000000, -740.000000)" fill="url(#linearGradient-1)"><g transform="translate(26.000000, 670.000000)"><polygon points="36 124 14.8397309 135.124612 18.8809827 111.562306 1.76196541 94.8753882 25.4198655 91.4376941 36 70 46.5801345 91.4376941 70.2380346 94.8753882 53.1190173 111.562306 57.1602691 135.124612"></polygon></g></g></g></svg>
+        </div>
+        <h2 class="hl__comp-heading">Deposit your work</h2>
+        <div class="hl__icon-promo__text-action">
+          <p class="hl__icon-promo__description">All members of the Harvard research community, including students, research staff, and other faculties, are welcome to use DASH to archive and share their manuscripts where they have the rights to do so.</p>
+          <div class="hl__icon-promo__action-container">
+            <a href="/login" class="hl__button hl__button--small" title="Submit your work"><span class="hl__button__text">Log in to submit your work</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ds-top-level-community-list></ds-top-level-community-list>
+</div>

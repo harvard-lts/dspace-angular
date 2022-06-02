@@ -1,0 +1,185 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+  // reduced animation motion per user's preference
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  color: $c-font-base;
+  font-family: $f-lora;
+  font-size: 17px;
+  line-height: (29 / 17);  // line-height / font-size
+  position: relative;
+
+  @media ($bp-small-min) {
+    font-size: 19px;
+    line-height: (32 / 19); // line-height / font-size
+  }
+
+  & * {
+    margin-top: 0;
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: $f-lora;
+}
+
+
+
+
+// BOOTSTRAP CUSTOM STYLES
+
+// alerts
+.alert {
+  font-family: $font-family-sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+}
+a.alert-link:hover {
+  border-bottom-color: currentColor;
+}
+
+// badges
+.badge {
+  font-family: $font-family-sans-serif;
+}
+a.badge {
+  border: 0;
+}
+
+// breadcrumbs
+.breadcrumb {
+  font-family: $font-family-sans-serif;
+
+  a {
+    font-weight: $font-weight-normal;
+  }
+}
+
+// forms
+form, fieldset {
+  font-family: $font-family-sans-serif;
+
+  label:not(.form-check-label):not(.custom-control-label):not(.custom-file-label) {
+    font-weight: $font-weight-bold;
+  }
+}
+label, .input-group-text {
+  font-family: $font-family-sans-serif;
+}
+form input[type="text"] {
+  // margin-right: 0 !important;
+  // border-radius: 4px 0 0 4px;
+
+  + button.btn {
+    padding: $input-btn-padding-y 8px;
+    line-height: 1.5;
+    font-size: 1rem;
+    // border-radius: 0 4px 4px 0;
+
+    &[type="submit"] {
+      background: $gray-600;
+      border-color: $gray-600;
+
+      &:hover {
+        background: $gray-800;
+        border-color: $gray-800;
+      }
+
+      svg {
+        fill: $white;
+        margin-top: -7px;
+      }
+    }
+  }
+}
+
+
+// cards
+.card-header, .card-title {
+  color: $black;
+  font-family: $font-family-sans-serif;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.card-subtitle {
+  font-family: $font-family-base;
+  font-style: italic;
+}
+.card.text-white {
+  border-color: rgba($black, .125);
+  
+  .card-header {
+    color: $white;
+    background: transparent;
+    border-color: rgba($black, .125);
+  }
+  .card-title {
+    color: $white;
+  }
+  .card-footer {
+    border-color: rgba($black, .125);
+  }
+}
+
+
+
+// CUSTOM TO DSPACE
+
+// community list
+ds-community-list button.btn {
+  padding: 6px 12px;
+}
+cdk-tree-node div h5 {
+  margin-bottom: 10px;
+}
+
+// icon buttons - reduce padding so looks like small buttons
+#paginationControls, // gear
+ds-view-mode-switch a.btn, // toogles
+ds-rss a.btn // rss feed
+{
+  padding: 6px 12px;
+}
+ds-view-mode-switch a.btn // toogles
+{
+  background: $c-white;
+  color: $c-font-subtle;
+  border-color: $c-bd-subtle;
+
+  i {
+    font-size: 16px;
+  }
+}

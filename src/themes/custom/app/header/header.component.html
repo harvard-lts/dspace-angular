@@ -1,0 +1,45 @@
+<section class="hl__header-child">
+  <div class="hl__header-child__title hl__header-child__title--teal">
+    <a href="/" title="Digital Access to Scholarship at Harvard">
+      <span>DASH</span>
+    </a>
+  </div>
+  <div class="hl__header-child__logo">
+    <section class="hl__linked-image">
+      <a
+        href="/"
+        title="Harvard Library"
+      >
+        <img
+          class="hl__image"
+          alt="Harvard Library Logo"
+          height="24"
+          width="270"
+          src="assets/custom/images/hl-logo-horizontal.svg"
+        />
+      </a>
+    </section>
+  </div>
+</section>
+
+<header class="header">
+  
+  <nav role="navigation" [attr.aria-label]="'nav.user.description' | translate" class="container navbar navbar-expand-md px-0 navbar-toggle">
+    <div class="d-flex flex-grow-1 ml-auto justify-content-end align-items-center">
+      <ds-search-navbar class="navbar-search"></ds-search-navbar>
+      <ds-lang-switch></ds-lang-switch>
+      <ds-auth-nav-menu></ds-auth-nav-menu>
+      <ds-impersonate-navbar></ds-impersonate-navbar>
+      <div class="pl-2">
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()"
+                aria-controls="collapsingNav"
+                aria-expanded="false" [attr.aria-label]="'nav.toggle' | translate">
+          <span class="navbar-toggler-icon fas fa-bars fa-fw" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <ds-themed-navbar></ds-themed-navbar>
+
+</header>
