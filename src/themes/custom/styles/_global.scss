@@ -98,14 +98,10 @@ label, .input-group-text {
   font-family: $font-family-sans-serif;
 }
 form input[type="text"] {
-  // margin-right: 0 !important;
-  // border-radius: 4px 0 0 4px;
-
   + button.btn {
     padding: $input-btn-padding-y 8px;
     line-height: 1.5;
     font-size: 1rem;
-    // border-radius: 0 4px 4px 0;
 
     &[type="submit"] {
       background: $gray-600;
@@ -169,7 +165,9 @@ cdk-tree-node div h5 {
 // icon buttons - reduce padding so looks like small buttons
 #paginationControls, // gear
 ds-view-mode-switch a.btn, // toogles
-ds-rss a.btn // rss feed
+ds-rss a.btn, // rss feed
+ds-item-page ds-dso-page-version-button button.btn, 
+ds-item-page ds-dso-page-edit-button a.btn
 {
   padding: 6px 12px;
 }
@@ -182,4 +180,7 @@ ds-view-mode-switch a.btn // toogles
   i {
     font-size: 16px;
   }
+}
+ds-item-page ds-dso-page-version-button button.btn {
+  margin-bottom: 5px;
 }

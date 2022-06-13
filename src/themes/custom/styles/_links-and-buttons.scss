@@ -130,7 +130,8 @@ a.btn, button.btn, span.btn, .btn {
 // make any other button by adding its classname to the desired style
 
 // black button
-.hl__button {
+.hl__button,
+ds-process-form .btn-light.float-left {
   @include hl-button-base;
   background: $c-theme-base;
   border: transparent;
@@ -138,13 +139,14 @@ a.btn, button.btn, span.btn, .btn {
 
   &:hover, &:focus {
     background: $c-gray-6c6c6c;
-    // border-: $c-gray-6c6c6c;
   }
 }
 
 // blue button
 .hl__button--blue,
-input[type="submit"] {
+input[type="submit"],
+ds-process-form .btn-light.float-right,
+.btn.btn-success {
   @include hl-button-base;
   background: $c-theme-secondary;
   border: transparent;
@@ -153,6 +155,9 @@ input[type="submit"] {
   &:hover, &:focus {
     background: $c-theme-secondary-dark;
   }
+}
+.btn.btn-lg.btn-success {
+	margin-bottom: 20px;
 }
 
 // small buttons

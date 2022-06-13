@@ -206,27 +206,7 @@ ds-search-facet-selected-option {
   a:not(.btn) {
     label {
       font-weight: 700;
-
-      // &::after {
-      //   content: "\00d7";
-      //   font-family: FontAwesome;
-      //   margin-left: 9px;
-      //   color: white;
-      //   background: #6c6c6c;
-      //   height: 21px;
-      //   width: 21px;
-      //   line-height: 21px;
-      //   display: inline-block;
-      //   text-align: center;
-      //   border-radius: 50%;
-      // }
     }
-
-    // &:hover, &:focus {
-    //   label::after {
-    //     background: #eb001b;
-    //   }
-    // }
   }
 }
 

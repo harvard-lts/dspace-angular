@@ -1,0 +1,94 @@
+// header area for 'Management'
+.admin-menu-header h4 {
+	color: $c-white;
+}
+.admin-menu-header .sidebar-section > .nav-item {
+  height: 60px;
+  align-items: center;
+}
+
+// admin menu items
+ds-text-menu-item {
+	font-family: $f-trueno;
+}
+ds-themed-admin-sidebar ds-admin-sidebar {
+  nav.navbar .navbar-nav {
+    div.sidebar-section {
+      &.ng-trigger-bgColor.expanded {
+        background-color: $c-bd-subtle !important;
+      }
+
+      /* admin logo vertically centered */
+      img.admin-logo {
+        height: 35px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      // nav-item padding
+      .nav-item.nav-link {
+        padding: 13.75px 0;
+
+        .sidebar-collapsible ul {
+          padding-top: 0;
+
+          &:last-child {
+            padding-bottom: 13.5px;
+          }
+        }
+
+        ds-onclick-menu-item, ds-link-menu-item {
+          padding: 0 0 13.5px 13.5px;
+
+          .nav-item  {
+            display: inline-block;
+            padding: 0;
+            margin: 13.5px 0;
+
+            &:hover, &:focus {
+              border-color: $c-white;
+            }
+          }
+        } 
+      }
+
+      > a.nav-item.nav-link {
+        border: 0;
+
+        .section-header-text {
+          border-bottom: 3px solid transparent;
+
+          &:hover, &:focus {
+            border-color: $c-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// other pages that appear when logged in as an admin
+ds-file-download-link {
+	display: block;
+}
+
+ds-metadata-schema-form hr {
+	border-color: transparent;
+}
+
+.dropdown-item.entity-item.ng-star-inserted {
+  font-family: $f-trueno;
+}
+
+.text-light.badge.badge-success {
+	color: $c-white !important;
+}
+
+ds-item-search-result-list-element-submission h3.lead {
+	text-transform: none;
+	font-size: 17px;
+  line-height: 25px;
+	letter-spacing: normal;	
+	margin-bottom: 0;
+}
