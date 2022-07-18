@@ -1,13 +1,10 @@
 // badge --> eyebrow
-.badge-info {
-	// font-family: $f-trueno;
+ds-type-badge .badge-info {
 	color: $gray-600;
-	// display: inline-block;
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	// vertical-align: middle;
 	padding: 0;
 	margin: 0;
 	background: transparent;
@@ -27,7 +24,10 @@ ds-pagination .pagination-info {
 .item-list-title.lead, 
 ds-browse-entry-list-element a.lead,
 ds-community-list-element a.lead,
-ds-themed-community-list a.lead {
+ds-themed-community-list a.lead,
+ds-collection-search-result-list-element a.lead,
+ds-person-list-element a.lead,
+ds-collection-list-element a.lead {
   font-size: 17px;
   font-weight: 600;
   line-height: 25px;
